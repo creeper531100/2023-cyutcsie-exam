@@ -5,6 +5,7 @@
 using namespace std;
 
 // By Kashionz
+// https://gist.github.com/Kashionz/2430b7408ae6193e832365535f953ecb
 // 判斷一個數是否為質數
 bool is_prime(int n) {
     for (int i = 2; i < n; i++) {
