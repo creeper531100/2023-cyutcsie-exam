@@ -12,9 +12,11 @@ int main() {
     char op; // 儲存讀入的運算符號
 
     file >> ans >> op; // 讀取第一個運算元和運算符號
+    cout << ans << op; // 輸出讀入的數字
+
     while (op != '=') { // 當運算符號不是 '=' 時，進行運算
         file >> num; // 讀取下一個運算元
-        printf("%d", (int)num); // 輸出讀入的數字
+        cout << num;// 輸出讀入的數字
         switch (op) { // 根據運算符號進行相應的運算
         case '+':
             ans += num;
@@ -30,7 +32,7 @@ int main() {
             break;
         }
         file >> op; // 讀取下一個運算符號
-        printf("%c", op); // 輸出讀入的運算符號
+        cout << op; // 輸出讀入的運算符號
     };
     printf("%d\n", (int)round(ans)); // 輸出運算的結果，四捨五入為整數
 }
