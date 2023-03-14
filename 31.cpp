@@ -1,6 +1,8 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <fstream>
 #include <iostream>
+#include <string.h>
+
 using namespace std;
 
 // 輸出指定數量的星號字符

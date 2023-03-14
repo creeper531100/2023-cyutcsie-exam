@@ -1,38 +1,53 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include <fstream> 
-#include <iostream> 
+#include <iostream>
+#include <string.h>
 
 using namespace std;
 
+// 輸出指定數量的星號字符
+void print_star(int num) {
+    for (int i = 0; i < num; i++) {
+        printf("*");
+    }
+    printf("\n");
+}
+
 int main() {
-	// 69是隨便定的一個數字，只要足夠大就可以了
-    char str[69] = { '\0' };
     FILE* file = fopen("123.txt", "r+");
-    fread(str, 1, sizeof(str), file);
 
-    int offset = 0; // 設定初始位移量為 0
-    for (int i = 0; i < strlen(str); i++) { // 遍歷整個字串
-         // 如果是大小寫英文字元
-        if (str[i] >= 'a' && str[i] <= 'z' || str[i] >= 'A' && str[i] <= 'Z') {
-            offset += toupper(str[i]) - 'A' + 1; // 將其順序數值加總，不分大小寫
+    // 格式化單字陣列
+    char words[99][99] = { {'\0'} };
+
+    int words_len = 0; // 單字數量
+    int max_word_len = 0; // 最長單字的長度
+
+    // 讀取每個單字
+    while (!feof(file)) {
+        fscanf(file, "%s", words[words_len]);
+        printf("%s ", words[words_len]);
+
+        // 更新最長單字的長度
+        if (max_word_len <= strlen(words[words_len])) {
+            max_word_len = strlen(words[words_len]);
         }
+
+        words_len++;
     }
 
-    offset = offset % 26; // 取總和的 26 的餘數作為位移量
+    printf("\n");
 
-    // 再次遍歷整個字串
-    for (int i = 0; i < strlen(str); i++) {
-        if (str[i] >= 'a' && str[i] <= 'z') { // 如果是小寫英文字元
-            // 加上位移量，取 26 的餘數後，再加回 'a' 的 ASCII 值，得到加密後的字元
-            printf("%c", ((str[i] - 'a' + offset) % 26) + 'a'); 
-        }
-        else if (str[i] >= 'A' && str[i] <= 'Z') { // 如果是大寫英文字元
-            // 加上位移量，取 26 的餘數後，再加回 'A' 的 ASCII 值，得到加密後的字元
-            printf("%c", ((str[i] - 'A' + offset) % 26) + 'A'); 
-        }
-        else {
-            // 其他字元不用加密，直接輸出原本的字元
-            printf("%c", str[i]);
-        }
+    // 輸出星號邊框 (左右邊星號也需要印出，所以+2)
+    print_star(max_word_len + 2);
+    for (int i = 0; i < words_len; i++) {
+        /*
+         * *%-*s*\n 是一個格式化字串，用於輸出一個字符串並進行對齊操作。
+         * *：表示字段寬度的值通過參數傳遞，而不是直接在格式字符串中指定。
+         * -：表示左對齊輸出，即在字段寬度內將字符串向左對齊。
+         * %s：表示輸出字符串。
+         * \n：表示換行。
+         */
+        printf("*%-*s*\n", max_word_len, words[i]);
     }
+
+    print_star(max_word_len + 2);
 }
