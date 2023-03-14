@@ -1,12 +1,9 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <fstream>
-#include <stdio.h>
-#include <string.h>
-#include <string>
-using namespace std;
-
 //By asoocomtw
+
+using namespace std;
 int main() {
     // 打開檔案
     fstream ifs("123.txt", ios::in); // "123.txt" 是檔案名稱，ios::in 表示以讀取模式開啟檔案

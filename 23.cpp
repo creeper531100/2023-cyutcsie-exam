@@ -2,10 +2,9 @@
 #include <iostream>
 #include <fstream>
 #include <stdio.h>
-#include <string.h>
-#include <vector>
 using namespace std;
 
+// By Kashionz
 // 判斷一個數是否為質數
 bool is_prime(int n) {
     for (int i = 2; i < n; i++) {
@@ -49,7 +48,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         // 如果分子加 1 除以 4 的餘數為 0，則分子減 1 就會是最靠近分子的偶數且不能被 4 整除的數。
         // 例如，3 + 1 = 4，4 除以 4 的餘數為 0，所以最靠近 3 且不被 4 整除的偶數為 2。
-        if((arr[i] + 1) % 4 == 0) {
+        if ((arr[i] + 1) % 4 == 0) {
             printf("%d", arr[i] - 1);
         }
         else {
@@ -58,10 +57,8 @@ int main() {
             printf("%d", arr[i] + 1);
         }
 
-        if(i < n - 1) {
+        if (i < n - 1) {
             printf("*");
         }
     }
-
-    return 0;
 }

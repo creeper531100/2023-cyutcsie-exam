@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <algorithm>
+#include <algorithm> // std::sort
 
 /*
  * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
@@ -11,9 +11,7 @@
 
 using namespace std;
 
-
-/* 若你不想使用函數庫提供的演算法，你可以使用氣泡排序法。
-   並取消代碼塊註解
+/* 若你不想使用函數庫提供的演算法，你可以使用氣泡排序法。並取消代碼塊註解
 void bubble_sort(int arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -49,11 +47,11 @@ int main() {
     getline(input_file, input_str);
     int K = atoi(input_str.c_str()); // 視窗大小
 
-    printf("\n");
+    printf("\n%d\nAns=", K);
 
     /*
      * 以視窗大小為單位進行中值濾波
-     * len - (K - 1) 解釋: 
+     * len - (K - 1) 解釋:
      * 假設你有一個長度為 len 的數列，而你想對這個數列進行 K 個數為一個窗口的中值濾波。
      * 那麼，你需要對這個數列中的前 N-K+1 個數進行中值濾波，因為在這之後的數量已經無法構成一個完整的窗口，無法計算中值。
      *
