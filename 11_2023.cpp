@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-    // 可以改成從檔案讀入 ifstream ss("123.txt", ios::in);
-    stringstream ss("3 2 5 3 7 2");
+    // stringstream ss("3 2 5 3 7 2");
+    ifstream ss("123.txt", ios::in);
 
     int tmp1;
     int tmp2;
@@ -17,7 +17,7 @@ int main() {
     int prime_mul = 1;
 
     // 儲存質數和對應的餘數
-	// 255是隨便定的一個數字，只要足夠大就可以了
+    // 255是隨便定的一個數字，只要足夠大就可以了
     int a1[255];
     int a2[255];
 
@@ -30,9 +30,10 @@ int main() {
     //  105/3  餘數 下一個數字
 
     // 逐個讀入質數(tmp1)和餘數(tmp2)，並計算質數的乘積
-    while(ss >> tmp1 >> tmp2) {
+    while (ss >> tmp1 >> tmp2) {
         a1[len] = tmp1;
         a2[len] = tmp2;
+        printf("%d %d ", tmp1, tmp2);
 
         prime_mul *= tmp1;
         len++;
@@ -57,9 +58,9 @@ int main() {
      */
 
     int ans = 0;
-    for(int i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++) {
         ans += prime[i] * rem[i] * a2[i];
     }
 
-    printf("%d\n", ans % prime_mul);
+    printf("\nAns=%d\n", ans % prime_mul);
 }

@@ -1,12 +1,15 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS // 忽略警告
 
 #include <iostream> // 輸出結果用
+#include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     // 開啟文件，讀取初始向量
     FILE* file = fopen("b.txt", "r+");
     int x_marix[3] = { 0, 0, 0 };
     fscanf(file, "%d %d %d", &x_marix[0], &x_marix[1], &x_marix[2]);
+    printf("%d %d %d\n", x_marix[0], x_marix[1], x_marix[2]);
 
     // 定義一個3x3的矩陣a和一個長度為3的向量b
     int a_marix[3][3] = {
@@ -44,11 +47,8 @@ int main() {
     }
 
     // 輸出ans1+ans2+36的值
-    printf("%d\n", ans1 + ans2 + 36);
+    printf("Ans=%d\n", ans1 + ans2 + 36);
 
     // 關閉文件
     fclose(file);
 }
-
-
-
