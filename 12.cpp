@@ -1,16 +1,20 @@
 ﻿#include <fstream>
-#include<iostream>
-using namespace std;
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 
+using namespace std;
 int main() {
     ifstream ifs("123.txt", ios::in);
 
     int max_len; //最大長度
-    int ans = 0; //答案
     string str;  //文件內容字符串
+    int ans = 0; //答案
 
     //從文件中讀取字符串和最大長度
     ifs >> str >> max_len;
+    cout << str << endl;
+    cout << max_len << endl;
 
     //從頭到尾遍歷整個字符串，每次從 i 開始取出最大長度的子串，每次遞增3
     for (int i = 0; i < str.length(); i += max_len) {
@@ -33,5 +37,5 @@ int main() {
      * }
      */
 
-    cout << ans << endl;
+    cout << "Ans=" << ans << endl;
 }

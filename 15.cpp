@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
 
 using namespace std;
 
@@ -13,19 +14,20 @@ using namespace std;
  * 最後輸出計數器的值，即為結果。
  */
 
-/* chatgpt:
+/*
+ * chatgpt:
  * 整段程式碼的流程非常清晰，每個步驟都有明確的註解，讓讀者很容易理解每個步驟所做的事情。
  * 程式也沒有使用複雜的算法，只是使用基本的數學運算，因此易於理解和修改。
  */
 
 int main() {
-    int range; // range: 上限數字
-    int target; //target: 目標數字和
-    int count = 0; //count: 符合條件的數字個數
+    int range; // 上限數字
+    int target; // 目標數字和
+    int count = 0; // 符合條件的數字個數
 
     FILE* file = fopen("123.txt", "r"); // 開啟檔案
     fscanf(file, "%d %d", &range, &target); // 從檔案讀入上限數字與目標數字和
-    printf("%d %d \nAns=", range, target);
+    printf("%d %d \n", range, target);
 
     // 搜尋範圍內的每個數字
     for (int i = 0; i <= range; i++) {
@@ -42,12 +44,12 @@ int main() {
         for (int j = 0; j < strlen(str_num); j++) {
             digit_sum += str_num[j] - '0';
         }
-     
+
         // 如果數字和符合條件，則計數器加一
         if (digit_sum == target) {
             count++;
         }
     }
 
-    printf("%d\n", count);
+    printf("Ans=%d\n", count);
 }

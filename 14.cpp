@@ -1,5 +1,5 @@
 ﻿#include <fstream>
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -7,6 +7,7 @@ int main() {
     char first_char; //宣告字元變數first_char，用來存放身分證號碼的第一個字元
     string id_number; //宣告字串變數id_number，用來存放身分證號碼的第二到最後一個字元
     ifs >> first_char >> id_number;//讀取檔案內容，將檔案的第一個字元存入first_char，其他存入number
+    cout << first_char << id_number << endl;
 
     //宣告整數陣列conversion，並初始化為0，陣列大小為字元'Z'的ASCII碼值+1
     //因為需要存入'A' ~ 'Z'的值
@@ -49,20 +50,20 @@ int main() {
     int weight = 8;
 
     //使用迴圈計算身分證號碼倒數第二位到第八位的權重總和
-    for(int i = 0; i < id_number.length(); i++) {
+    for (int i = 0; i < id_number.length(); i++) {
         //將字元轉換為數字，存入變數digit
         int digit = id_number[i] - '0';
         //將digit乘上weight，加到checksum中
-        ans += digit  * weight;
+        ans += digit * weight;
         weight--;
     }
 
     ans = ans % 10;
 
     //確認權重是否大於0
-    if(ans > 0) {
+    if (ans > 0) {
         ans = 10 - ans;
     }
 
-    cout << first_char << id_number << ans << endl;
+    cout << "Ans=" << first_char << id_number << ans << endl;
 }
