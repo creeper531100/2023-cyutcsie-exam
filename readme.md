@@ -76,7 +76,7 @@ fscanf(file, "%d", &res);
 ```
 ### fstream
 除了可以使用 `FILE*` 檔案指標來進行檔案的讀寫外，還可以使用 `fstream` 類別來操作檔案。  
-`fstream` 可以將流中的字串轉換為數值型態，可以將將文件內的文字`123` 轉換為整數 `123`。  
+`fstream` 可以將流中的字串轉換為數值型態，比如將文件內的文字`123` 轉換為整數 `123`。  
 注意，如果需要讀取 C++ 的 string 時，請用fstream而非fscanf
 ```cpp
 #include <fstream>
