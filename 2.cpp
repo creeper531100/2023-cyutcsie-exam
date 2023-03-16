@@ -43,3 +43,15 @@ int main() {
     }
     cout << "Ans=" << str << endl;
 }
+
+/*
+ * 對於一個字串若起始字元為 A，最後字元為 L，且其間不含任何 A 或 L 字元則稱 AL 字串。
+ * 例： APENCIL 或 AXXBBHCL （四方形表示空白字元）
+ * 請設計一程式能從資料檔 b.txt 讀入一個字串（不超過 200 個字元），然後消去所有可
+ * 能的 AL 字串，使得消去後之輸出不包含 AL 字串。
+ * 範例輸入：
+ * Thisisaball
+ * 範例輸出：
+ * Thisisaball
+ * Ans=Thisis
+ */

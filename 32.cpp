@@ -39,3 +39,19 @@ int main() {
         }
     }
 }
+
+/*
+ * 字串加密：試寫一個程式可以讀入一個字串(長度最大為 100)，接著將字串中的英文字
+ * 元(’a’-‘z’或’A’-‘Z’)，依照其順序數值進行加總(‘a’與’A’的順序為 1，’b’與’B’
+ * 的順序為 2，依此類推)，加總結果取 26 的餘數視為密鑰，也是每個英文字元的位移量，
+ * 假設位移量是 2，則’a’-‘z’的加密結果如下：
+ * 原始: abcdefghijklmnopqrstuvwxyz
+ * 加密: cdefghijklmnopqrstuvwxyzab
+ * 請從資料檔 e.txt 中讀入一行字串，將字串中的大小寫英文字元都進行加密，其餘字元
+ * 則是原封不動，輸出加密後的字串。
+ * 範例輸入：
+ * It is never too late to learn, just do it.
+ * 範例輸出：(所有英文字元依據其順序的加總值為 412，取 26 的餘數為 22)
+ * It is never too late to learn, just do it.
+ * Ans=Ep eo jaran pkk hwpa pk hawnj, fqop zk ep.
+ */

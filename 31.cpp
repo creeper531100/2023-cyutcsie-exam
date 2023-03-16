@@ -17,7 +17,7 @@ int main() {
     ifstream file("123.txt", ios::in);
 
     // 單字暫存變數
-	// 99是隨便定的一個數字，只要足夠大就可以了
+    // 99是隨便定的一個數字，只要足夠大就可以了
     char word[99] = { '\0' };
     // 格式化單字陣列
     char words[99][99] = { {'\0'} };
@@ -53,3 +53,21 @@ int main() {
 
     print_star(max_word_len  + 2);
 }
+
+/*
+ * 請撰寫一個程式，從資料檔 e.txt 讀入一個英文句子(由 a-z 的大小寫與空白組成，不
+ * 含句點)，裡面有好幾個單字，接著以最長單字為最大寬度，將這些單字輸出在一個由星
+ * 號字元的長方形中。
+ * 範例輸入：
+ * CYUT is the top 1000 university
+ * 範例輸出：
+ * CYUT is the top 1000 university
+ * ************
+ * *CYUT      *
+ * *is        *
+ * *the       *
+ * *top       *
+ * *1000      *
+ * *university*
+ * ************
+*/

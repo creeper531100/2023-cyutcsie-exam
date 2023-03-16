@@ -38,3 +38,19 @@ int main() {
 		cout << "Ans=No" << endl;
 	}
 }
+
+/*
+ * 部分序列字串指原字串中刪掉一個以上字元且不改變原順序的部份字串。請撰寫程式從
+ * 資料檔 d.txt 讀入兩個字串(每一字串皆不超過 50 字元)，判斷第一個字串是否為第二個
+ * 字串的部份序列字串，若是則輸出 Yes 以及被刪除之部分序列字串，否則輸出 No。
+ * 範例輸入一：
+ * bcfg gcbgcefgjvk
+ * 範例輸出一：
+ * bcfg gcbgcefgjvk
+ * Ans=Yes gcgejvk
+ * 範例輸入二：
+ * bcfg gcagcefgjvk
+ * 範例輸出二：
+ * bcfg gcagcefgjvk
+ * Ans=No
+ */

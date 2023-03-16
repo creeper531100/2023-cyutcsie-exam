@@ -38,7 +38,7 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 | ✔️ 17 | [中值濾波演算](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/17.cpp)  |
 | ✔️ 18 | [閏年](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/18.cpp)          |
 | ✔️ 19 | [部分字串](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/19.cpp)      |
-| ❌ 20 | [最小子數列](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/20.cpp)    |
+| ✔️ 20 | [最小子數列](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/20.cpp)    |
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
 

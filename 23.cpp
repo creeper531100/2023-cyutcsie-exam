@@ -4,7 +4,7 @@
 #include <stdio.h>
 using namespace std;
 
-// By Kashionz
+// 參考 Kashionz 方法
 // https://gist.github.com/Kashionz/2430b7408ae6193e832365535f953ecb
 // 判斷一個數是否為質數
 bool is_prime(int n) {
