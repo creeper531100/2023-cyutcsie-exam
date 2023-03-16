@@ -1,4 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
 #include <iostream>
 
 using namespace std;
@@ -20,7 +23,7 @@ int main() {
     fscanf(file, "%d", &res);
     printf("%d\n", res);
 
-    int mp[9999] = { 0 };
+    int mp[65535] = { 0 };
 
     // 從2開始到res，進行以下的迴圈
     // 質因數從2開始，結果不大於輸入數字
@@ -33,8 +36,8 @@ int main() {
     }
 
     printf("Ans=");
-    // 從9999 - 1開始到0，進行以下的迴圈
-    for (int i = 9998; i >= 0; i--) {
+    // 從65535 - 1開始到0，進行以下的迴圈
+    for (int i = 65534; i >= 0; i--) {
         // 如果mp[i]出現質數的次數不為0，進入以下的條件式
         if (mp[i] != 0) {
             printf("%d(%d)", i, mp[i]);
