@@ -107,10 +107,10 @@ fread(buff, 1, sizeof(buff), file);
 
 ### 一些技巧
 ```cpp
-	fstream ifs("123.txt", ios::in); // A6969
-	float number;
-	char first;
-	file >> first >> number; 
+fstream ifs("123.txt", ios::in); // A6969
+float number;
+char first;
+file >> first >> number; 
 ```
 `fstream` 可以智慧地提取不同型態的數據，比如第一個字符 `'A'`，下一個浮點數 `6969` 等等。
 這樣，我們就可以透過 `fstream` 來快速地從字串中提取想要的數據。
