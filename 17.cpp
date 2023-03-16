@@ -36,10 +36,10 @@ int main() {
     //讀取第一行
     getline(input_file, input_str);
     stringstream ss(input_str);
-    cout << input_str << endl;
 
     // 讀入正整數序列
     while (ss >> data[len]) {
+        printf("%d ", data[len]); // 輸出每個輸入的數字
         len++; // 更新正整數序列的長度
     }
 
@@ -47,7 +47,7 @@ int main() {
     getline(input_file, input_str);
     int K = atoi(input_str.c_str()); // 視窗大小
 
-    printf("%d\nAns=", K);
+    printf("\n%d\nAns=", K);
 
     /*
      * 以視窗大小為單位進行中值濾波
@@ -77,12 +77,7 @@ int main() {
         sort(window, window + K); // 對視窗內的數字進行排序
         // 若你不想使用函數庫提供的演算法，請替換上面代碼塊
         // bubble_sort(window, K);
-        printf("%d", window[K / 2]); // 輸出排序後中間位置的數字
-
-        // 注意這邊不能多印出一個空格，所以需要判斷
-        if(i < len - (K - 1) - 1) {
-            printf(" "); 
-        }
+        printf("%d ", window[K / 2]); // 輸出排序後中間位置的數字
     }
 }
 

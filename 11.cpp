@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
-    fstream ifs("123.txt", ios::in);
-    
+    // stringstream ss("3 2 5 3 7 2");
+    ifstream ss("123.txt", ios::in);
+
     int tmp1;
     int tmp2;
 
@@ -28,15 +29,11 @@ int main() {
     //     ^   ^   ^
     //  105/3  餘數 下一個數字
 
-    string res;
-    getline(ifs, res);
-    cout << res << endl;
-
     // 逐個讀入質數(tmp1)和餘數(tmp2)，並計算質數的乘積
-    stringstream ss(res);
     while (ss >> tmp1 >> tmp2) {
         a1[len] = tmp1;
         a2[len] = tmp2;
+        printf("%d %d ", tmp1, tmp2);
 
         prime_mul *= tmp1;
         len++;
@@ -65,7 +62,7 @@ int main() {
         ans += prime[i] * rem[i] * a2[i];
     }
 
-    printf("Ans=%d\n", ans % prime_mul);
+    printf("\nAns=%d\n", ans % prime_mul);
 }
 
 /*

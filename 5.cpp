@@ -1,6 +1,5 @@
 ﻿#include <fstream>
 #include <iostream>
-#include <string>
 #include <sstream>
 
 using namespace std;
@@ -17,21 +16,14 @@ using namespace std;
  */
 
 int main() {
-    fstream iss("e.txt", ios::in);
+    ifstream iss("e.txt", ios::in);
     int len = 0, max = 0;
     //99是隨便定的一個數字，只要足夠大就可以了
-    int arr[99] = { 0 };
-
-    string res;
-    getline(iss, res);
-    cout << res << endl;
-
-    stringstream ss(res);
-    while (ss >> arr[len]) {
+    int arr[99];
+    while (iss >> arr[len]) {
+        printf("%d ", arr[len]);
         len++;
     }
-
-
     for (int i = 0; i < len; i++) {
         int sum = 0;
         for (int j = i; j < len; j++) {
@@ -40,7 +32,7 @@ int main() {
                 max = sum;
         }
     }
-    printf("Ans=%d\n", max);
+    printf("\nAns=%d\n", max);
 }
 
 /*

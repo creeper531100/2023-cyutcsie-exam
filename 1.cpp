@@ -42,7 +42,6 @@ int main() {
             printf("%d(%d)", i, mp[i]);
         }
     }
-	printf("\n");
 }
 
 /*

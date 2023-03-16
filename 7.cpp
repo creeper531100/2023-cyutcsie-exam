@@ -1,22 +1,28 @@
-﻿#include <fstream>
-#include <string>
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <sstream>
+#include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
 int main() {
-    fstream ifs("b.txt", ios::in);
+    FILE* file = fopen("b.txt", "r+");
 
     float dec;
     int integer;
 
-    string res;
-    getline(ifs, res);
-    cout << res << endl;
+    //99是隨便定的一個數字，只要足夠大就可以了
+    char buf[99] = { '\0' };
 
-    stringstream ss(res);
-    ss >> integer >> dec;
-    printf("Ans=");
+    fscanf(file, "%s", &buf);
+    sscanf(buf, "%d%f", &integer, &dec);
+    /*
+     * 這邊使用fscanf()是因為可以先輸出輸入數字，日後也可以直接使用sscanf()解析
+     * sscanf()函式會將讀取到的字串轉換成指定的型別
+     * 在這裡，使用%d%f分別將整數部分和小數部分轉換成int和float型別
+     */
+
+    printf("%s", buf);
+    printf("\nAns=");
 
     string tmp;
     while (integer != 0) {
@@ -30,7 +36,7 @@ int main() {
     }
 
     //將二進制數字反轉輸出
-    for (int i = tmp.length(); i >= 0; i--) {
+    for(int i = tmp.length(); i >= 0; i--) {
         printf("%c", tmp[i]);
     }
 
@@ -50,7 +56,6 @@ int main() {
             dec--;
         }
     }
-    printf("\n");
 }
 
 /*

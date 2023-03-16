@@ -1,8 +1,6 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <fstream>
-#include <sstream>
-#include <string>
 using namespace std;
 
 //By asoocomtw
@@ -31,19 +29,13 @@ int main() {
     int num[100] = { 0 };
     int sort = 0;
 
-    string res;
-    getline(ifs, res);
-    sort = atoi(res.c_str());
+    // 讀取第一行的排序方式，0為升序，1為降序
+    ifs >> sort;
     cout << sort << endl;
 
-    getline(ifs, res);
-    stringstream ss(res);
-
-    cout << res << endl;
-
-    // 讀取第一行的排序方式，0為升序，1為降序
     // 讀取檔案中的數字，並將數字存入num陣列
-    while (ss >> num[count]) {
+    while (ifs >> num[count]) {
+        cout << num[count] << " ";
         count++;
     }
 
@@ -65,14 +57,10 @@ int main() {
     }
 
     // 輸出排序後的結果
-    cout << "Ans=";
+    cout << "\nAns=";
     for (int i = 0; i < count; i++) {
-        cout << num[i];
-        if(i < count - 1) {
-            cout << " ";
-        }
+        cout << num[i] << " ";
     }
-    cout << endl;
 }
 
 /*

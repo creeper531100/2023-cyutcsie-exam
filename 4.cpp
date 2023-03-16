@@ -7,8 +7,8 @@
 using namespace std;
 
 int main() {
-    //99是隨便定的一個數字，只要足夠大就可以了
-    char res[99] = { '\0' };
+    //999是隨便定的一個數字，只要足夠大就可以了
+    char res[999] = { '\0' };
     FILE* file = fopen("d.txt", "r+");
     fread(res, 1, sizeof(res), file); //fgets 讀檔案所有內容
 
@@ -26,7 +26,7 @@ int main() {
         dst = "0"; //清除 dst
     }
     printf("%s\n", res);
-    printf("Ans=%d\n", ans);
+    printf("Ans=%d", ans);
 }
 
 /*

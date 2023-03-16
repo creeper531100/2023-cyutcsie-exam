@@ -1,6 +1,5 @@
 ﻿#include <fstream>
 #include <iostream>
-#include <sstream>
 
 using namespace std;
 
@@ -18,22 +17,16 @@ int LCM(int num1, int num2) {
 }
 
 int main() {
-    fstream iss("b.txt", ios::in);
-
+    ifstream iss("b.txt", ios::in);
     int ans = 1;
     int data;
 
-    //輸出輸入結果
-    string res;
-    iss >> res;
-    cout << res << endl;
-
-    stringstream ss(res);
-    while (ss >> data) {
+    while (iss >> data) {
+        printf("%d ", data);
         ans = LCM(ans, data);
     }
 
-    printf("Ans=%d\n", ans);
+    printf("\nAns=%d\n", ans);
 }
 
 /*
