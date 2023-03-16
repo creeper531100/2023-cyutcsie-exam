@@ -74,7 +74,7 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 FILE* file = fopen("a.txt", "r+");
 fscanf(file, "%d", &res);
 ```
-#### fstream
+### fstream
 除了可以使用 `FILE*` 檔案指標來進行檔案的讀寫外，還可以使用 `fstream` 類別來操作檔案。  
 `fstream` 可以將流中的字串轉換為數值型態，可以將將文件內的文字`123` 轉換為整數 `123`。  
 注意，如果需要讀取 C++ 的 string 時，請用fstream而非fscanf
@@ -84,7 +84,7 @@ string res;
 fstream ifs("123.txt", ios::in);
 ifs >> res; //類似cin 之用法
 ```
-#### stringstream
+### stringstream
 
 `stringstream` 可以將流中的字串轉換為數值型態，例如使用 `stringstream` 將字串 `"123"` 轉換為整數 `123`。  
 配合getline可以讀單行並提取，幫助我們快速進行資料轉換和資料處理。
@@ -94,7 +94,7 @@ int num;
 stringstream ss("123");
 ss >> num;  // 提取整數123
 ```
-# fread 讀整個文件
+### fread 讀整個文件
 如果當需要讀取包含換行符號的文字檔案時，可以利用 fread 函數來讀取
 ```cpp
 // fread(你的字串, 一次讀取幾個位元, 長度, 檔案)
