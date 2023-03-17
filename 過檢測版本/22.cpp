@@ -29,17 +29,16 @@ bool sorted_asc_desc(int asc, int left, int right) {
 }
 
 int main() {
-    fstream ifs("123.txt", ios::in);
     int count = 0;
     int num[100] = { 0 };
     int sort = 0;
 
     string res;
-    getline(ifs, res);
+    getline(cin, res);
     sort = atoi(res.c_str());
     cout << sort << endl;
 
-    getline(ifs, res);
+    getline(cin, res);
     stringstream ss(res);
 
     cout << res << endl;

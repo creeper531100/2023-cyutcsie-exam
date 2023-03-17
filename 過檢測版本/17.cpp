@@ -6,7 +6,7 @@
 
 /*
  * 此題與自學程檢題目不符
- * 
+ *
  * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
  * 因此編譯失敗需要在檔案開頭加上 "#include<algorithm>" 才能順利編譯。
  */
@@ -28,15 +28,13 @@ using namespace std;
  */
 
 int main() {
-    fstream input_file("123.txt", ios::in); // 讀取輸入檔案
-
     int data[99] = { 0 }; // 儲存輸入的正整數序列
     int len = 0; // 正整數序列的長度
 
     string input_str;
 
     //讀取第一行
-    getline(input_file, input_str);
+    getline(cin, input_str);
     stringstream ss(input_str);
     cout << input_str << endl;
 
@@ -46,7 +44,7 @@ int main() {
     }
 
     //讀取第二行長度
-    getline(input_file, input_str);
+    getline(cin, input_str);
     int K = atoi(input_str.c_str()); // 視窗大小
 
     printf("%d\nAns=", K);
@@ -82,8 +80,8 @@ int main() {
         printf("%d", window[K / 2]); // 輸出排序後中間位置的數字
 
         // 注意這邊不能多印出一個空格，所以需要判斷
-        if(i < len - (K - 1) - 1) {
-            printf(" "); 
+        if (i < len - (K - 1) - 1) {
+            printf(" ");
         }
     }
 }

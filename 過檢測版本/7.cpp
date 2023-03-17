@@ -5,13 +5,11 @@
 
 using namespace std;
 int main() {
-    fstream ifs("b.txt", ios::in);
-
     float dec;
     int integer;
 
     string res;
-    getline(ifs, res);
+    getline(cin, res);
     cout << res << endl;
 
     stringstream ss(res);

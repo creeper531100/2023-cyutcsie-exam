@@ -17,13 +17,12 @@ using namespace std;
  */
 
 int main() {
-    fstream iss("e.txt", ios::in);
     int len = 0, max = 0;
     //99是隨便定的一個數字，只要足夠大就可以了
     int arr[99] = { 0 };
 
     string res;
-    getline(iss, res);
+    getline(cin, res);
     cout << res << endl;
 
     stringstream ss(res);

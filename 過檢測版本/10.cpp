@@ -5,9 +5,8 @@ using namespace std;
 
 //By TFShih
 int main() {
-    fstream ifs("123.txt", ios::in);
     string res = "(){[()]}()";
-    ifs >> res;
+    cin >> res;
 
     stack<char> st;  //運用類似資料結構中以堆疊(stack)求後序式之技巧
 

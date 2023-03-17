@@ -6,12 +6,11 @@
 using namespace std;
 int main() {
     // 打開檔案
-    fstream ifs("123.txt", ios::in); // "123.txt" 是檔案名稱，ios::in 表示以讀取模式開啟檔案
     string boom; // 第一個字串
     string check; // 第二個字串
 
     // 從檔案讀入兩個字串
-    ifs >> boom >> check; // 將兩個字串依序讀入變數 boom 和 check 中
+    cin >> boom >> check; // 將兩個字串依序讀入變數 boom 和 check 中
     cout << boom << endl; // 輸出第一個字串
     cout << check << endl; // 輸出第二個字串
 

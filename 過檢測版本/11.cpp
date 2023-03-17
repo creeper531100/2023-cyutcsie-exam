@@ -4,8 +4,6 @@
 using namespace std;
 
 int main() {
-    fstream ifs("123.txt", ios::in);
-    
     int tmp1;
     int tmp2;
 
@@ -29,7 +27,7 @@ int main() {
     //  105/3  餘數 下一個數字
 
     string res;
-    getline(ifs, res);
+    getline(cin, res);
     cout << res << endl;
 
     // 逐個讀入質數(tmp1)和餘數(tmp2)，並計算質數的乘積

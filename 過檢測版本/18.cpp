@@ -43,13 +43,11 @@ int get_leap(int year, int moon) {
 }
 
 int main() {
-    fstream file("123.txt", ios::in); // 開啟檔案，設定為讀取模式
-
     int year;
     int month;
     int day;
 
-    file >> year >> month >> day;
+    cin >> year >> month >> day;
     printf("%d %d %d\n", year, month, day);
 
     char weeks[7][70] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
@@ -67,7 +65,7 @@ int main() {
      * 第一個迴圈從1900年開始，一直加到指定年份的前一年，對每一年的12個月進行計算，並將經過的天數加到total_days中。
      * 這部分代碼中，變數i代表當前年份與1900年之間的差距，now_year代表當前年份。
      */
-    for(int i = 0; i < year - 1900; i++) {
+    for (int i = 0; i < year - 1900; i++) {
         int now_year = 1900 + i;
         for (int j = 1; j <= 12; j++) {
             total_days += get_leap(now_year, j);

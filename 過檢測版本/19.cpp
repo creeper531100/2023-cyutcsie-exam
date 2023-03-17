@@ -7,9 +7,8 @@ int main() {
 	string pattern;
 	string text;
 
-	fstream ss("123.txt", ios::in);
 	// 讀取輸入的兩個字串，並存入 pattern 和 text 變數中
-	ss >> pattern >> text;
+	cin >> pattern >> text;
 	cout << pattern << " " << text << endl;
 
 	int pattern_idx = 0;

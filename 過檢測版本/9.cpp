@@ -12,7 +12,6 @@
 using namespace std;
 
 int main() {
-    FILE* file = fopen("d.txt", "r+");
     // 分別用來存儲讀入的字串和計算結果的字串
     // 99是隨便定的一個數字，只要足夠大就可以了
     char res[99], ans[99];
@@ -20,7 +19,7 @@ int main() {
     // 從檔案中讀入字串
     // 將讀入的字串複製到計算結果的字串中
 
-    fscanf(file, "%s", res);
+    scanf("%s", res);
     printf("%s\n", res);
     strcpy(ans, res);
 

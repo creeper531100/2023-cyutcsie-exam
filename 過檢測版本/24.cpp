@@ -6,10 +6,9 @@
 using namespace std;
 
 int main() {
-    fstream ifs("123.txt", ios::in);
     int X;
     int K;
-    ifs >> X >> K;
+    cin >> X >> K;
     printf("%d\n%d\n", X, K);
 
     /*

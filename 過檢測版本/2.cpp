@@ -7,10 +7,9 @@
 using namespace std;
 int main() {
     string str;
-    fstream ifs("123.txt", ios::in);
 
     // 從ifs讀取一行文字
-    std::getline(ifs, str);
+    std::getline(cin, str);
     cout << str << endl;
 
     stack<int> a_pos;

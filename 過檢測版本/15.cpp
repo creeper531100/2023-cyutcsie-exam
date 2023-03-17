@@ -28,8 +28,7 @@ int main() {
     int target; // 目標數字和
     int count = 0; // 符合條件的數字個數
 
-    FILE* file = fopen("123.txt", "r"); // 開啟檔案
-    fscanf(file, "%d %d", &range, &target); // 從檔案讀入上限數字與目標數字和
+    scanf("%d %d", &range, &target); // 從檔案讀入上限數字與目標數字和
     printf("%d %d\n", range, target);
 
     // 搜尋範圍內的每個數字

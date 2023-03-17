@@ -18,8 +18,7 @@ using namespace std;
 
 int main() {
     int res = 0;
-    FILE* file = fopen("a.txt", "r+");
-    fscanf(file, "%d", &res);
+    scanf("%d", &res);
     printf("%d\n", res);
 
     int mp[65535] = { 0 };
@@ -42,7 +41,7 @@ int main() {
             printf("%d(%d)", i, mp[i]);
         }
     }
-	printf("\n");
+    printf("\n");
 }
 
 /*

@@ -7,7 +7,7 @@ using namespace std;
 /*
  * ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
  * 注意，自學程檢平台這題驗證有問題!!
- * 
+ *
  * 應題目應印出
  * 5
  * Ans=3*5*7*11*13
@@ -26,7 +26,7 @@ using namespace std;
  * https://gist.github.com/Kashionz/2430b7408ae6193e832365535f953ecb
  */
 
-// 判斷一個數是否為質數
+ // 判斷一個數是否為質數
 bool is_prime(int n) {
     for (int i = 2; i < n; i++) {
         if (n % i == 0) {
@@ -37,13 +37,12 @@ bool is_prime(int n) {
 }
 
 int main() {
-    fstream file("123.txt");
     int arr[99] = { 0 };
 
     int n = 0;
     int count = 0;
 
-    file >> n;
+    cin >> n;
     cout << n << endl;
 
     // 找出前 n 個質數

@@ -3,7 +3,7 @@
 using namespace std;
 /* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
  * 注意，自學程檢平台這題驗證有問題!!
- * 
+ *
  * 應題目應印出
  * W10023273
  * Ans=W100232736
@@ -16,10 +16,9 @@ using namespace std;
  * ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
  */
 int main() {
-    fstream ifs("123.txt", ios::in);
     char first_char; //宣告字元變數first_char，用來存放身分證號碼的第一個字元
     string id_number; //宣告字串變數id_number，用來存放身分證號碼的第二到最後一個字元
-    ifs >> first_char >> id_number;//讀取檔案內容，將檔案的第一個字元存入first_char，其他存入number
+    cin >> first_char >> id_number;//讀取檔案內容，將檔案的第一個字元存入first_char，其他存入number
     //cout << first_char << id_number << endl;
 
     //宣告整數陣列conversion，並初始化為0，陣列大小為字元'Z'的ASCII碼值+1
@@ -79,7 +78,7 @@ int main() {
     }
 
     //cout << "Ans=" << first_char << id_number << ans << endl;
-	cout << first_char << id_number << ans << endl;
+    cout << first_char << id_number << ans << endl;
 }
 
 /* 身份證號碼的最後一碼為檢查碼，用於確認號碼是否正確，此檢查碼運算規則如下：
