@@ -8,14 +8,19 @@
 #include <string>
 using namespace std;
 
+/* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+ * 注意，自學程檢平台這題驗證有問題!!
+ * 驗證平台有人手太肥多按一個空格，害我驗證不了
+ * ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
+ */
+
 int main() {
-    fstream file("123.txt", ios::in);
     string tmp;
     string ans_str = "";
 
     // getline() 函數用於從檔案中讀取一行文本，並存儲到指定的字符串變數 tmp 中。
     // 讀取測試資料筆數
-    getline(file, tmp);
+    getline(cin, tmp);
     cout << tmp << endl;
 
     // atoi 字串轉數字
@@ -24,7 +29,7 @@ int main() {
 
     for (int pos = 0; pos < max; pos++) {
         int len = 0;
-        getline(file, tmp);
+        getline(cin, tmp);
         /*
          * stringstream 是 C++ 中一個實用的字符串流，它可以像檔案流一樣使用運算符 >> 來從字符串中讀取數據。
          * 在此程式碼中，它被用於將讀取到的每個卡號字符串分解為一個個數字，並存儲到 digit 數組中。
@@ -35,7 +40,7 @@ int main() {
         // 最長的卡號長度為 19
         int number[19] = { 0 };
         // 將卡號拆成一個個數字
-        while(ss >> number[len]) {
+        while (ss >> number[len]) {
             len++;
         }
 
@@ -60,7 +65,7 @@ int main() {
         }
     }
 
-    cout << "Ans=" << ans_str << endl;
+    cout << "Ans=" << ans_str.substr(0, ans_str.length() - 1) << endl;
 }
 
 /*

@@ -26,7 +26,8 @@ int main() {
     int words_len = 0;
     // 最長單字的長度
     int max_word_len = 0;
-
+	
+    string str;
     // 讀取每個單字
     while(file >> word) {
         // 更新最長單字的長度
@@ -34,10 +35,12 @@ int main() {
             max_word_len  = strlen(word);
         }
         // 將單字復制到陣列中
+        str = str + word + " ";
         sscanf(word, "%s", words[words_len]);
         words_len++;
     }
-
+    cout << str.substr(0, str.length() - 1) << endl;
+	
     // 輸出星號邊框 (左右邊星號也需要印出，所以+2)
     print_star(max_word_len  + 2);
     for (int i = 0; i < words_len; i++) {
