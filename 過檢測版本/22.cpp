@@ -3,6 +3,9 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <stdio.h>
+#include <stdlib.h>
+
 using namespace std;
 
 //By asoocomtw
@@ -68,7 +71,7 @@ int main() {
     cout << "Ans=";
     for (int i = 0; i < count; i++) {
         cout << num[i];
-        if(i < count - 1) {
+        if (i < count - 1) {
             cout << " ";
         }
     }

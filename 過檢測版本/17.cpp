@@ -5,6 +5,8 @@
 #include <algorithm> // std::sort
 
 /*
+ * 此題與自學程檢題目不符
+ * 
  * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
  * 因此編譯失敗需要在檔案開頭加上 "#include<algorithm>" 才能順利編譯。
  */

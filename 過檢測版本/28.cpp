@@ -17,20 +17,19 @@ int ctoi(char ch) {
 }
 
 int main() {
-    fstream file("123.txt", ios::in); // 開啟檔案，設定為讀取模式
     string line;
     int case_count;
 
-    getline(file, line);
+    getline(cin, line);
     // 將字串轉換成 stringstream 方便從中取出數字
     stringstream ss(line);
 
     ss >> case_count;
     cout << case_count << endl;
-    
+
     string ans_str = "Ans="; // 儲存結果的字串
-    for(int i = 0; i < case_count; i++) {
-        getline(file, line);
+    for (int i = 0; i < case_count; i++) {
+        getline(cin, line);
         cout << line << endl;
 
         // 儲存保齡球得分的字元陣列，初始值為 -1 方便後續的處理
@@ -42,7 +41,7 @@ int main() {
 
         // 逐一取出字元並存入 scores 陣列中
         while (iss >> scores[size]) {
-            if(scores[size] == 'X') {
+            if (scores[size] == 'X') {
                 // 把X改為 '9' + 1，方便後續的計算
                 // ('9' + 1) - '0' = 10
                 scores[size] = '9' + 1;
@@ -53,7 +52,7 @@ int main() {
 
         int score = 0;
         int chk_idx = 1; // 用來檢查局數的變數
-        for(int j = 0; j < size; j++) {
+        for (int j = 0; j < size; j++) {
             // 計算兩次計分中有沒有超過10
             if (scores[chk_idx] >= '0' && scores[chk_idx] <= '9') {
                 if (!(scores[j - 1] >= '0' && scores[chk_idx - 1] <= '9')) {
@@ -71,7 +70,7 @@ int main() {
             chk_idx += 2;
 
             // 局數不夠計分失敗
-            if(scores[j] == '/' && (j - 1 <= 0 || j + 1 >= size)) {
+            if (scores[j] == '/' && (j - 1 <= 0 || j + 1 >= size)) {
                 score = -1;
                 break;
             }
@@ -111,7 +110,7 @@ int main() {
         }
 
         // 檢查是否有計分失敗 -1 即為 Unknown
-        if(score > 0) {
+        if (score > 0) {
             char tmp[99];
             //sprintf 用於數字轉字串
             sprintf(tmp, "%d ", score);
@@ -121,7 +120,7 @@ int main() {
             ans_str += "Unknown ";
         }
     }
-    cout << ans_str << endl;
+    cout << ans_str.substr(0, ans_str.length() - 1) << endl;
 }
 
 /*

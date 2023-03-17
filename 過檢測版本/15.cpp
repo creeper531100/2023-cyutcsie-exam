@@ -1,5 +1,8 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 using namespace std;
 
@@ -14,11 +17,11 @@ using namespace std;
  * 最後輸出計數器的值，即為結果。
  */
 
-/*
- * chatgpt:
- * 整段程式碼的流程非常清晰，每個步驟都有明確的註解，讓讀者很容易理解每個步驟所做的事情。
- * 程式也沒有使用複雜的算法，只是使用基本的數學運算，因此易於理解和修改。
- */
+ /*
+  * chatgpt:
+  * 整段程式碼的流程非常清晰，每個步驟都有明確的註解，讓讀者很容易理解每個步驟所做的事情。
+  * 程式也沒有使用複雜的算法，只是使用基本的數學運算，因此易於理解和修改。
+  */
 
 int main() {
     int range; // 上限數字
@@ -27,7 +30,7 @@ int main() {
 
     FILE* file = fopen("123.txt", "r"); // 開啟檔案
     fscanf(file, "%d %d", &range, &target); // 從檔案讀入上限數字與目標數字和
-    printf("%d %d \n", range, target);
+    printf("%d %d\n", range, target);
 
     // 搜尋範圍內的每個數字
     for (int i = 0; i <= range; i++) {

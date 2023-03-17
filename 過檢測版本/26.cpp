@@ -4,25 +4,30 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <stdio.h>
+#include <stdlib.h>
+
 using namespace std;
 
 int main() {
-    fstream ifs("123.txt", ios::in);
-
     int n;
     // 存放每一個數字的字串陣列，69是隨便定的一個數字，只要足夠大就可以了
     string str[69];
+    string res;
 
     // 讀入數字個數
-    ifs >> n;
+    std::getline(cin, res);
+    n = atoi(res.c_str());
+
+    std::getline(cin, res);
+
     cout << n << endl;
+    cout << res << endl;
 
+    stringstream ss(res);
     for (int i = 0; i < n; i++) {
-        ifs >> str[i];
-        cout << str[i] << " ";
+        ss >> str[i];
     }
-
-    cout << "\n";
 
     int max_value = 0;
     int max_index = 0;

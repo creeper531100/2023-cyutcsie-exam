@@ -6,9 +6,8 @@ using namespace std;
 
 
 int main() {
-    fstream iss("123.txt", ios::in);
     string str;
-    iss >> str;
+    cin >> str;
 
     cout << str << endl;
     cout << "Ans=";
@@ -24,9 +23,9 @@ int main() {
             for (int j = i + 2; j < str.length(); j++) {
                 if (str[j] == 'C')
                     break;
-				
+
                 // 計算數字加總，加上 10 是為了防止出現負數
-				// 並且再使用%來取尾數
+                // 並且再使用%來取尾數
                 // 2 % 10 = 2; 12 % 10 = 2 也不會被影響
                 int ans = ((str[j] - '0') - offset + 10) % 10;
                 cout << ans;
