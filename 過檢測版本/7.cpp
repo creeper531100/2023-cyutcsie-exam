@@ -28,7 +28,7 @@ int main() {
     }
 
     //將二進制數字反轉輸出
-    for (int i = tmp.length(); i >= 0; i--) {
+    for (int i = tmp.length() - 1; i >= 0; i--) {
         printf("%c", tmp[i]);
     }
 

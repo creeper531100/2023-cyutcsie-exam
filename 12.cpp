@@ -23,11 +23,11 @@ int main() {
     }
 
     /* TODO: 不使用STL容器方法（可替換上面的代碼塊）
-     * for (int i = 0; i < str.length(); i += 3) {
+     * for (int i = 0; i < str.length(); i += max_len) {
      *     char tmp[4] = { '\0' }; // 暫存，用於轉整數
      *     //從頭到尾遍歷整個字符串，每次從 i 開始取出最大長度的子串，每次遞增3
      *     //以防數值超過字串長度造成溢位，需要加入i + j < str.length()判斷
-     *     for (int j = 0; j < 3; j++) {
+     *     for (int j = 0; j < max_len; j++) {
      *         if (i + j < str.length()) {
      *             break;
      *         }

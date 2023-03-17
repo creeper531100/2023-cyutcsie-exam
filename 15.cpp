@@ -34,18 +34,15 @@ int main() {
 
     // 搜尋範圍內的每個數字
     for (int i = 0; i <= range; i++) {
-        // 目前數字的數字和
+         // 目前數字的數字和
         int digit_sum = 0;
+        int tmp = i;
 
-        // 宣告字串變數用來處理每個數字
-        char str_num[10];
-
-        // 將目前數字轉成字串
-        sprintf(str_num, "%d", i);
-
-        // 計算目前數字的數字和
-        for (int j = 0; j < strlen(str_num); j++) {
-            digit_sum += str_num[j] - '0';
+        while(tmp != 0) {
+            // 首先計算tmp除以10的餘數，即tmp % 10，這是為了得到i的最低位數
+            digit_sum += tmp % 10;
+            // tmp 除以10，即將其向右移動一位，以處理i的下一位數。
+            tmp /= 10;
         }
 
         // 如果數字和符合條件，則計數器加一

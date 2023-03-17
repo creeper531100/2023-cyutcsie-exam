@@ -26,7 +26,7 @@ int main() {
         dst = "0"; //清除 dst
     }
     printf("%s\n", res);
-    printf("Ans=%d", ans);
+    printf("Ans=%d\n", ans);
 }
 
 /*
