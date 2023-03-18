@@ -19,13 +19,13 @@ int main() {
      * 所以你不能用float，解決方法是使用較大的浮點數(double)。
      * 不然計算容易溢位，幹還好我有驗證，耖
      */
+	
     double ans = 0;
+    double factorial_result = 1;
     for (int i = 1; i <= K; i++) {
-        double factorial_result = 1;
         //計算 i 的階乘
-        for (int j = 1; j <= i; j++) {
-            factorial_result *= j;
-        }
+        factorial_result *= i;
+
         //計算 X 的 i 次方，相加至 ans 變數
         ans += (double)pow(X, i) / factorial_result;
     }
