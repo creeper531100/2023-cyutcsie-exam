@@ -6,18 +6,21 @@
 using namespace std;
 int main() {
     // 块IEEE 754Α32秈计
-    float input = 123.111;
+    float input = 12.42;
+    cin >> input;
+    cout << input << endl;
+
     int ieee754 = *(int*)&input;
 
-    // 才腹计场だ㎝Ю计场だ
+    // 才腹菠
     bool sign = (ieee754 >> 31) & 0x1;
-    char exp = (ieee754 >> 23) & 0xFF;
-    int mantissa = ieee754 & 0x7FFFFF;
 
     // 璸衡计
+    char exp = (ieee754 >> 23) & 0xFF;
     char exp_value = exp - 127;
 
-    // Ю计场だ1眔1.xxxxxΑ
+    // 璸衡Ю计玡留玡竚1眔1.xxxxxΑ
+    int mantissa = ieee754 & 0x7FFFFF;
     mantissa |= 0x800000;
 
     string ans = bitset<32>(mantissa).to_string();
@@ -28,5 +31,5 @@ int main() {
     stringstream ss(integer);
     ss >> int_integer;
 
-    cout << int_integer << "+" << dec << endl;
+    cout << "Ans=" << int_integer << "+" << dec << endl;
 }
