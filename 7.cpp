@@ -55,7 +55,6 @@ int main() {
             //若進位扣1
             dec--;
         }
-		printf("\n");
     }
 }
 
