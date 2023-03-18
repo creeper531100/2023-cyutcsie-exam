@@ -1,30 +1,28 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <algorithm> // std::sort
 
 /*
  * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
- * 因此編譯失敗需要在檔案開頭加上 "#include<algorithm>" 才能順利編譯。
+ * 因此使用sort需要在檔案開頭加上 "#include<algorithm>" 才能順利編譯。
  */
 
-using namespace std;
-
 /* 若你不想使用函數庫提供的演算法，你可以使用氣泡排序法。並取消代碼塊註解
- * void bubble_sort(int arr[], int n) {
- *    for (int i = 0; i < n - 1; i++) {
- *        for (int j = 0; j < n - i - 1; j++) {
- *            if (arr[j] > arr[j + 1]) {
- *                int temp = arr[j];
- *                arr[j] = arr[j + 1];
- *                arr[j + 1] = temp;
+ * void bubble_sort(int num[], int n) {
+ *     for (int i = 0; i < n; i++) {
+ *        for (int j = 0; j < i; j++) {
+ *            if (num[i] > num[j]) {
+ *                int sw = num[j];
+ *                num[j] = num[i];
+ *                num[i] = sw;
  *            }
  *        }
  *    }
  * }
  */
 
+using namespace std;
 int main() {
     fstream input_file("123.txt", ios::in); // 讀取輸入檔案
 
@@ -74,7 +72,7 @@ int main() {
         sort(window, window + K); // 對視窗內的數字進行排序
         // 若你不想使用函數庫提供的演算法，請替換上面代碼塊
         // bubble_sort(window, K);
-        printf("%d\n", window[K / 2]); // 輸出排序後中間位置的數字
+        printf("%d ", window[K / 2]); // 輸出排序後中間位置的數字
     }
 }
 

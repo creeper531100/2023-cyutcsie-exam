@@ -42,6 +42,12 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
 
+# 過檢測版本要讀嗎?  
+
+不用，我測試用來過檢測的版本
+因為自學平台檢測比較G8一點，他會檢驗空格
+但實際考試不會檢查空格
+
 # 關於C4996
 
 	在使用 Visual Studio 編譯器，可能會遇到以下錯誤訊息：
