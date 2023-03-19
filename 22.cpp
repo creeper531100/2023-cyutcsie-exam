@@ -1,11 +1,5 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
-#include <sstream>
-#include <string>
-#include <stdio.h>
-#include <stdlib.h>
-
 using namespace std;
 
 //By asoocomtw
@@ -62,7 +56,7 @@ int main() {
     }
 
     // 輸出排序後的結果
-    cout << "\nAns=";
+    printf("\nAns=");
     for (int i = 0; i < count; i++) {
         cout << num[i] << " ";
     }

@@ -1,7 +1,5 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <iostream>
+﻿#include <iostream>
 #include <fstream>
-#include <stdio.h>
 using namespace std;
 
 // 參考 Kashionz 方法
@@ -38,6 +36,7 @@ int main() {
     printf("Ans=");
     for (int i = 0; i < n; i++) {
         printf("%d", arr[i]);
+        //印星星
         if (i < n - 1) {
             printf("*");
         }
@@ -57,7 +56,7 @@ int main() {
             // 例如，5 + 1 = 6，6 是最靠近 5 且不被 4 整除的偶數。
             printf("%d", arr[i] + 1);
         }
-
+        //印星星
         if (i < n - 1) {
             printf("*");
         }
