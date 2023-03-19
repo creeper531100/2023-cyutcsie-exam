@@ -2,7 +2,6 @@
 #include <iostream>
 #include <stack>
 using namespace std;
-
 //By TFShih
 int main() {
     fstream ifs("123.txt", ios::in);
@@ -21,11 +20,13 @@ int main() {
         if (res[i] == '{' || res[i] == '[' || res[i] == '(') {
             st.push(res[i]);
         }
-        else if (!st.empty()) {
+        else if (st.top() == '{' && res[i] == '}' || 
+                 st.top() == '[' && res[i] == ']' || 
+                 st.top() == '(' && res[i] == ')' &&
+                 !st.empty()
+        ) {
             // 如果遇到右括號，則檢查 stack 中是否有左括號與之配對
-            if (st.top() == '{' && res[i] == '}' || st.top() == '[' && res[i] == ']' || st.top() == '(' && res[i] == ')') {
-                st.pop();
-            }
+            st.pop();
         }
         else {
             // 如果遇到了右括號但是 stack 中沒有左括號與之配對，則字符串不合法
