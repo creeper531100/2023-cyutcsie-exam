@@ -16,7 +16,7 @@ using namespace std;
  */
 
 int main() {
-    ifstream iss("e.txt", ios::in);
+    fstream iss("e.txt", ios::in);
     int len = 0, max = 0;
     //99是隨便定的一個數字，只要足夠大就可以了
     int arr[99];

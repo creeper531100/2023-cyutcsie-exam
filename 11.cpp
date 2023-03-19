@@ -4,8 +4,7 @@
 using namespace std;
 
 int main() {
-    // stringstream ss("3 2 5 3 7 2");
-    ifstream ss("123.txt", ios::in);
+    fstream ss("123.txt", ios::in);
 
     int tmp1;
     int tmp2;

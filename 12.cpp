@@ -5,7 +5,7 @@
 
 using namespace std;
 int main() {
-    ifstream ifs("123.txt", ios::in);
+    fstream ifs("123.txt", ios::in);
 
     int max_len; //最大長度
     string str;  //文件內容字符串
