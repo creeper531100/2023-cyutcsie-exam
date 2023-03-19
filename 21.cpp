@@ -26,23 +26,23 @@ int main() {
     int B = 0; // 記錄 B 的數量
 
     // 逐一檢查第一個字串中的每個數字
-        for (int i = 0; i < boom.length(); i++) {
-            // 逐一檢查第二個字串中的每個數字
-            for (int j = 0; j < check.length(); j++) {
-                // 找到相同數字
-                if (boom[i] == check[j]) {
-                    if (i == j) {
-                        // 若在同一個位置上的數字相同
-                        A++;
-                    }
-                    else {
-                        // 若在不同的位置上的數字相同
-                        B++;
-                    }
+    for (int i = 0; i < boom.length(); i++) {
+        // 逐一檢查第二個字串中的每個數字
+        for (int j = 0; j < check.length(); j++) {
+            // 找到相同數字
+            if (boom[i] == check[j]) {
+                if (i == j) {
+                    // 若在同一個位置上的數字相同
+                    A++;
+                }
+                else {
+                    // 若在不同的位置上的數字相同
+                    B++;
                 }
             }
         }
-        
+    }
+
     printf("Ans=%dA%dB\n", A, B);
 }
 
