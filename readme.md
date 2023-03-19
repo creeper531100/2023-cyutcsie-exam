@@ -31,7 +31,7 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 | ✔️ 10 | [括號](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/10.cpp)          | ✔️ 30 | [信用卡](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/30.cpp)
 | ✔️ 11 | [餘數定理](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/11.cpp)      | ✔️ 31 | [印星星](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/31.cpp)
 | ✔️ 12 | [雜湊](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/12.cpp)          | ✔️ 32 | [字串加密](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/32.cpp)
-| ✔️ 13 | [日曆](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/13.cpp)          | ❌ 33 | [撲克牌](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/33.cpp)
+| ✔️ 13 | [日曆](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/13.cpp)          | ✔️ 33 | [撲克牌](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/33.cpp)
 | ✔️ 14 | [身分證字號](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/14.cpp)    |
 | ✔️ 15 | [數字總和](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/15.cpp)      |
 | ✔️ 16 | [儲蓄](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/16.cpp)          |
