@@ -22,7 +22,7 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 | ✔️ 1  | [質因數](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/1.cpp)         | ✔️ 21 | [猜數字](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/21.cpp) |
 | ✔️ 2  | [AL字串](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/2.cpp)         | ✔️ 22 | [排序](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/22.cpp)
 | ✔️ 3  | [四則運算](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/3.cpp)       | ✔ 23 | [圓周率](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/23.cpp)
-| ✔️ 4  | [字串加總](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/4.cpp)       | ✔️ 24 | [運算式](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/24.cpp)
+| ✔️ 4  | [字串加總](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/4_1.cpp)       | ✔️ 24 | [運算式](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/24.cpp)
 | ✔️ 5  | [連續整數加總](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/5.cpp)   | ✔️ 25 | [雞兔同籠](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/25.cpp)
 | ✔️ 6  | [最小公倍數](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/6.cpp)     | ✔️ 26 | [轉換最大數](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/26.cpp)
 | ✔️ 7  | [十進位轉二進位](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/7.cpp) | ✔️ 27 | [位移編碼](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/27.cpp)
