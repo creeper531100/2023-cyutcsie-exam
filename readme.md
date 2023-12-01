@@ -45,9 +45,11 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 
 # 過檢測版本要讀嗎?  
 
+```
 不用，我測試用來過檢測的版本
 因為自學平台檢測比較G8一點，他會檢驗空格
 但實際考試不會檢查空格
+```
 
 # 關於C4996
 
