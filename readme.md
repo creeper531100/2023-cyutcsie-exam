@@ -19,7 +19,7 @@
 | ✔️ 6  | [最小公倍數](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/6.cpp)     | ✔️ 26 | [轉換最大數](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/26.cpp)
 | ✔️ 7  | [十進位轉二進位](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/7.cpp) | ✔️ 27 | [位移編碼](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/27.cpp)
 | ✔️ 8  | [橢圓](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/8.cpp)           | ⚠️ 28 | [保齡球](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/28.cpp)
-| ✔️ 9  | [炸彈](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/9.cpp)           | ❌ 29 | [最長道路](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/29.cpp)
+| ✔️ 9  | [炸彈](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/9.cpp)           | ✔️ 29 | [最長道路](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/29.cpp)
 | ✔️ 10 | [括號](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/10.cpp)          | ✔️ 30 | [信用卡](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/30.cpp)
 | ✔️ 11 | [餘數定理](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/11.cpp)      | ✔️ 31 | [印星星](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/31.cpp)
 | ✔️ 12 | [雜湊](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/12.cpp)          | ✔️ 32 | [字串加密](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/32.cpp)
