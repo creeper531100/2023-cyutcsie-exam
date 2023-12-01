@@ -2,14 +2,6 @@
 此專案僅供參考，其目的在於提供想法，請慎用當參考作為範例使用。  
 專案提供解決方案可能不是最佳或最快的，謝謝您使用此專案作為學習和參考資料，如果您有任何疑問或建議，請隨時與我聯絡:P  
 
-## 題目
-
-提供的題目為2023年成檢題目  
-你可以在資工系網找到該年題目  
-https://csie.cyut.edu.tw/p/412-1044-811.php?Lang=zh-tw  
-你也可以使用程式自學平臺來驗證題目  
-選擇老師專區 -> 台中市 -> 朝陽 -> 廖珗洲老師  
-https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401  
 
 #### 完成狀態
 `✔️` 完成題目  
@@ -41,6 +33,15 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 | ✔️ 20 | [最小子數列](https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/20.cpp)    |
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)]()
+
+## 題目
+
+提供的題目為2023年成檢題目  
+你可以在資工系網找到該年題目  
+https://csie.cyut.edu.tw/p/412-1044-811.php?Lang=zh-tw  
+你也可以使用程式自學平臺來驗證題目  
+選擇老師專區 -> 台中市 -> 朝陽 -> 廖珗洲老師  
+https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401  
 
 # 過檢測版本要讀嗎?  
 
