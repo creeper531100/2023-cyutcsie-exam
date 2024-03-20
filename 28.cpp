@@ -17,7 +17,7 @@ int ctoi(char ch) {
 }
 
 int main() {
-    fstream file("123.txt", ios::in); // 開啟檔案，設定為讀取模式
+    ifstream file("123.txt"); // 開啟檔案，設定為讀取模式
     string line;
     int case_count;
 

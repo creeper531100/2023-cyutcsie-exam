@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
     char first_char; //宣告字元變數first_char，用來存放身分證號碼的第一個字元
     string id_number; //宣告字串變數id_number，用來存放身分證號碼的第二到最後一個字元
     ifs >> first_char >> id_number;//讀取檔案內容，將檔案的第一個字元存入first_char，其他存入number

@@ -11,7 +11,7 @@ using namespace std;
  */
 
 int main() {
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
     int M; // 每年存款金額
     int T; // 存款年數
     int S; // 本利和

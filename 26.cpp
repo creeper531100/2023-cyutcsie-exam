@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
 
     int n;
     // 存放每一個數字的字串陣列，69是隨便定的一個數字，只要足夠大就可以了

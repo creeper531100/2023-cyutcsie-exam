@@ -23,7 +23,7 @@ bool sorted_asc_desc(int asc, int left, int right) {
 }
 
 int main() {
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
     int count = 0;
     int num[100] = { 0 };
     int sort = 0;

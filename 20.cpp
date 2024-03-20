@@ -13,7 +13,7 @@ using namespace std;
  * 尋找包含1到K的最小子數列的方式也很簡單，從頭到尾就好
  */
 int main() {
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
 
     int N = 0;  // 數列的長度
     int M = 0;  // 數列中每個數的最大值，即 mod 的數字

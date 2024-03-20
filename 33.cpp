@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    fstream ss("123.txt", ios::in);
+    ifstream ss("123.txt");
 
     // 用陣列 arr 儲存所有牌面的值，初始化為 -1。
     int arr[99] = { -1 };

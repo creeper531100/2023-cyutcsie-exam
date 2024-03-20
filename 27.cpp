@@ -6,7 +6,7 @@ using namespace std;
 
 
 int main() {
-    fstream iss("123.txt", ios::in);
+    ifstream iss("123.txt");
     string str;
     iss >> str;
 

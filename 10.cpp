@@ -4,7 +4,7 @@
 using namespace std;
 //By TFShih
 int main() {
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
     string res = "(){[()]}()";
     ifs >> res;
 

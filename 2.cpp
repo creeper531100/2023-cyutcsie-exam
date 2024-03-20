@@ -7,7 +7,7 @@
 using namespace std;
 int main() {
     string str;
-    fstream ifs("123.txt", ios::in);
+    ifstream ifs("123.txt");
 
     // 從ifs讀取一行文字
     std::getline(ifs, str);

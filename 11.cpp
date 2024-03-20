@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    fstream ss("123.txt", ios::in);
+    ifstream ss("123.txt");
 
     int tmp1;
     int tmp2;

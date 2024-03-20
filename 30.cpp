@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-    fstream file("123.txt", ios::in);
+    ifstream file("123.txt");
     string tmp;
     string ans_str = "";
 

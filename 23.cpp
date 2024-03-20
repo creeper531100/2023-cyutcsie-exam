@@ -15,7 +15,7 @@ bool is_prime(int n) {
 }
 
 int main() {
-    fstream file("123.txt");
+    ifstream file("123.txt");
     int arr[99] = { 0 };
 
     int n = 0;

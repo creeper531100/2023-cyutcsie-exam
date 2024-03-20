@@ -24,7 +24,7 @@
 
 using namespace std;
 int main() {
-    fstream input_file("123.txt", ios::in); // 讀取輸入檔案
+    ifstream input_file("123.txt"); // 讀取輸入檔案
 
     int data[99] = { 0 }; // 儲存輸入的正整數序列
     int len = 0; // 正整數序列的長度

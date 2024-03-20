@@ -17,7 +17,7 @@ int main() {
     ifs >> f1 >> f2 >> total >> foots;
     printf("%d %d %d %d\n", f1, f2, total, foots);
 
-    // 直接用二元一次代數化簡求解
+    // 直接用一元二次代數化簡求解
     // 化簡流程如下
     // https://github.com/creeper531100/2023-cyutcsie-exam/blob/master/image/img0.png
     int x = (foots - total * f2) / (f1 - f2);  // 求解 x 的值

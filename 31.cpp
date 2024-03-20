@@ -14,7 +14,7 @@ void print_star(int num) {
 }
 
 int main() {
-    fstream file("123.txt", ios::in);
+    ifstream file("123.txt");
 
     // 格式化單字陣列
     char words[99][99] = { {'\0'} };

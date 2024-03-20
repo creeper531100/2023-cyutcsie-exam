@@ -6,7 +6,7 @@
 
 using namespace std;
 int main() {
-    fstream file("c.txt", ios::in); // 開啟檔案，設定為讀取模式
+    ifstream file("c.txt"); // 開啟檔案，設定為讀取模式
     float ans; // 儲存運算結果
     float num; // 儲存讀入的數字
     char op; // 儲存讀入的運算符號

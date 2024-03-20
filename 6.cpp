@@ -17,7 +17,7 @@ int LCM(int num1, int num2) {
 }
 
 int main() {
-    fstream iss("b.txt", ios::in);
+    ifstream iss("b.txt");
     int ans = 1;
     int data;
 

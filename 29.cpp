@@ -35,7 +35,7 @@ int main() {
     // vector<型態> 宣告名稱;
     vector<string> maze;
 
-    fstream iss("123.txt", ios::in);
+    ifstream iss("123.txt");
     iss >> rows >> cols;
     printf("%d %d\n", rows, cols);
 
