@@ -10,7 +10,7 @@ int main() {
     ifstream ifs("123.txt");
 
     // 從ifs讀取一行文字
-    std::getline(ifs, str);
+    getline(ifs, str);
     cout << str << endl;
 
     stack<int> a_pos;
