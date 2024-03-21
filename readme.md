@@ -79,7 +79,7 @@ https://e-tutor.itsa.org.tw/e-Tutor/course/category.php?id=401
 注意，使用 `fscanf` 時，要確保字元陣列中的資料格式符號 `%` 與輸入的資料類型相符。
 ```cpp
 #include <stdio.h>
-#include <stdiolib.h>
+#include <stdlib.h>
 FILE* file = fopen("a.txt", "r+");
 fscanf(file, "%d", &res);
 ```
