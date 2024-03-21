@@ -1,6 +1,11 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <algorithm>
+/*
+ * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
+ * 因此使用sort需要在檔案開頭加上 "#include<algorithm>" 才能順利編譯。
+ */
+
 using namespace std;
 
 bool asc(int left, int right) {
