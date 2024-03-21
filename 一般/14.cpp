@@ -4,55 +4,57 @@ using namespace std;
 
 int main() {
     ifstream ifs("123.txt");
-    char first_char; //宣告字元變數first_char，用來存放身分證號碼的第一個字元
-    string id_number; //宣告字串變數id_number，用來存放身分證號碼的第二到最後一個字元
-    ifs >> first_char >> id_number;//讀取檔案內容，將檔案的第一個字元存入first_char，其他存入number
-    cout << first_char << id_number << endl;
+    char ch; //宣告字元變數ch，用來存放身分證號碼的第一個字元
+    string id; //宣告字串變數id，用來存放身分證號碼的第二到最後一個字元
 
-    //宣告整數陣列conversion，並初始化為0，陣列大小為字元'Z'的ASCII碼值+1
+    ifs >> ch >> id;//讀取檔案內容，將檔案的第一個字元存入ch，其他存入id
+    cout << ch << id << endl;
+
+    //宣告整數陣列map，並初始化為0，陣列大小為字元'Z'的ASCII碼值+1
     //因為需要存入'A' ~ 'Z'的值
-    int conversion['Z' + 1] = { 0 };
+    int map['Z' + 1] = { 0 };
 
-    conversion['A'] = 10;
-    conversion['B'] = 11;
-    conversion['C'] = 12;
-    conversion['D'] = 13;
-    conversion['E'] = 14;
-    conversion['F'] = 15;
-    conversion['G'] = 16;
-    conversion['H'] = 17;
-    conversion['I'] = 34;
-    conversion['J'] = 18;
-    conversion['K'] = 19;
-    conversion['L'] = 20;
-    conversion['M'] = 21;
-    conversion['N'] = 22;
-    conversion['O'] = 35;
-    conversion['P'] = 23;
-    conversion['Q'] = 24;
-    conversion['R'] = 25;
-    conversion['S'] = 26;
-    conversion['T'] = 27;
-    conversion['U'] = 28;
-    conversion['V'] = 29;
-    conversion['W'] = 32;
-    conversion['X'] = 30;
-    conversion['Y'] = 31;
-    conversion['Z'] = 33;
+    //將陣列映射至id
+    map['A'] = 10;
+    map['B'] = 11;
+    map['C'] = 12;
+    map['D'] = 13;
+    map['E'] = 14;
+    map['F'] = 15;
+    map['G'] = 16;
+    map['H'] = 17;
+    map['I'] = 34;
+    map['J'] = 18;
+    map['K'] = 19;
+    map['L'] = 20;
+    map['M'] = 21;
+    map['N'] = 22;
+    map['O'] = 35;
+    map['P'] = 23;
+    map['Q'] = 24;
+    map['R'] = 25;
+    map['S'] = 26;
+    map['T'] = 27;
+    map['U'] = 28;
+    map['V'] = 29;
+    map['W'] = 32;
+    map['X'] = 30;
+    map['Y'] = 31;
+    map['Z'] = 33;
 
     //計算檢查碼，先將header轉換成數字後，取個位數乘上9
-    int ans = conversion[first_char] % 10 * 9;
+    int ans = map[ch] % 10 * 9;
 
     //再將header轉換成數字後，取十位數加上去
-    ans += conversion[first_char] / 10;
+    ans += map[ch] / 10;
 
     //宣告變數weight為8，用來計算身分證號碼倒數第二位到第八位的權重
     int weight = 8;
 
     //使用迴圈計算身分證號碼倒數第二位到第八位的權重總和
-    for (int i = 0; i < id_number.length(); i++) {
+    for (int i = 0; i < id.length(); i++) {
         //將字元轉換為數字，存入變數digit
-        int digit = id_number[i] - '0';
+        int digit = id[i] - '0';
         //將digit乘上weight，加到checksum中
         ans += digit * weight;
         weight--;
@@ -65,7 +67,7 @@ int main() {
         ans = 10 - ans;
     }
 
-    cout << "Ans=" << first_char << id_number << ans << endl;
+    cout << "Ans=" << ch << id << ans << endl;
 }
 
 /* 身份證號碼的最後一碼為檢查碼，用於確認號碼是否正確，此檢查碼運算規則如下：

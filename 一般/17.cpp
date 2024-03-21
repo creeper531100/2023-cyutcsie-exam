@@ -1,32 +1,26 @@
 ﻿#include <iostream>
 #include <fstream>
 #include <sstream>
-#include <algorithm> // std::sort
-
-/*
- * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
- * 因此使用sort需要在檔案開頭加上 "#include<algorithm>" 才能順利編譯。
- */
-
-/* 若你不想使用函數庫提供的演算法，你可以使用氣泡排序法。並取消代碼塊註解
- * void bubble_sort(int num[], int n) {
- *     for (int i = 0; i < n; i++) {
- *        for (int j = 0; j < i; j++) {
- *            if (num[i] > num[j]) {
- *                int sw = num[j];
- *                num[j] = num[i];
- *                num[i] = sw;
- *            }
- *        }
- *    }
- * }
- */
 
 using namespace std;
+
+//氣泡排序法
+void sort(int num[], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            if (num[i] > num[j]) {
+                int sw = num[j];
+                num[j] = num[i];
+                num[i] = sw;
+            }
+        }
+    }
+}
+
 int main() {
     ifstream input_file("123.txt"); // 讀取輸入檔案
 
-    int data[99] = { 0 }; // 儲存輸入的正整數序列
+    int data[99] = {0}; // 儲存輸入的正整數序列
     int len = 0; // 正整數序列的長度
 
     string res;
@@ -48,7 +42,7 @@ int main() {
     printf("\n%d\nAns=", K);
 
     for (int i = 0; i < len; i++) {
-        int window[10] = { 0 }; // 儲存目前的視窗
+        int window[10] = {0}; // 儲存目前的視窗
 
         // 超出正整數序列的範圍，不處理
         if (i + K > len) {
@@ -69,9 +63,7 @@ int main() {
             window[j] = data[i + j]; // 把正整數序列中的數字加入視窗
         }
 
-        sort(window, window + K); // 對視窗內的數字進行排序
-        // 若你不想使用函數庫提供的演算法，請替換上面代碼塊
-        // bubble_sort(window, K);
+        sort(window, K); // 對視窗內的數字進行排序
         printf("%d ", window[K / 2]); // 輸出排序後中間位置的數字
     }
 }
