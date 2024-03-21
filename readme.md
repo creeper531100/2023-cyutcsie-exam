@@ -90,7 +90,7 @@ fscanf(file, "%d", &res);
 ```cpp
 #include <fstream>
 string res;
-fstream ifs("123.txt", ios::in);
+ifstream ifs("123.txt");
 ifs >> res; //類似cin 之用法
 ```
 ### stringstream
