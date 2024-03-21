@@ -116,7 +116,7 @@ fread(buff, 1, sizeof(buff), file);
 
 ### 一些技巧
 ```cpp
-fstream ifs("123.txt", ios::in); // A6969
+ifstream ifs("123.txt"); // A6969
 float number;
 char first;
 file >> first >> number; 
