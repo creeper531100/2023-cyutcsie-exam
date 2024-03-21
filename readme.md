@@ -108,7 +108,7 @@ ss >> num;  // 提取整數123
 ```cpp
 // fread(你的字串, 一次讀取幾個位元, 長度, 檔案)
 #include <stdio.h>
-#include <stdiolib.h>
+#include <stdlib.h>
 FILE* file = fopen("a.txt", "r+");
 char buff[99] = {'\0'};
 fread(buff, 1, sizeof(buff), file);
