@@ -1,4 +1,4 @@
-﻿#include <fstream>
+#include <fstream>
 #include <iostream>
 using namespace std;
 
@@ -43,31 +43,23 @@ int main() {
     map['Z'] = 33;
 
     //計算檢查碼，先將header轉換成數字後，取個位數乘上9
-    int ans = map[ch] % 10 * 9;
+    int check = map[ch] % 10 * 9;
 
     //再將header轉換成數字後，取十位數加上去
-    ans += map[ch] / 10;
-
-    //宣告變數weight為8，用來計算身分證號碼倒數第二位到第八位的權重
-    int weight = 8;
+    check += map[ch] / 10;
 
     //使用迴圈計算身分證號碼倒數第二位到第八位的權重總和
     for (int i = 0; i < id.length(); i++) {
         //將字元轉換為數字，存入變數digit
         int digit = id[i] - '0';
-        //將digit乘上weight，加到checksum中
-        ans += digit * weight;
-        weight--;
+        //將digit乘上weight，加到ans中
+        check += digit * (8 - i);
     }
 
-    ans = ans % 10;
+    check = check % 10;
+    check = 10 - check;
 
-    //確認權重是否大於0
-    if (ans > 0) {
-        ans = 10 - ans;
-    }
-
-    cout << "Ans=" << ch << id << ans << endl;
+    cout << "Ans=" << ch << id << check << endl;
 }
 
 /* 身份證號碼的最後一碼為檢查碼，用於確認號碼是否正確，此檢查碼運算規則如下：
