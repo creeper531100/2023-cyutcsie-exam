@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 
 using namespace std;
@@ -28,15 +28,15 @@ int main() {
         // 存放轉換後的數字
         int sum = 0;
         // 取得數字的位數
-        int str_len = str[i].length();
+        int len = str[i].length();
 
-        for (int j = 0; j < str_len; j++) {
-            // 計算數字加總，加上 10 是為了防止出現負數
-            sum += str[i][j] - '0' + 10;
+        for (int j = 0; j < len; j++) {
+            // 計算數字加總
+            sum += str[i][j] - '0';
         }
 
         // 將位數和數字加總取 10 的餘數合併成一個新數字
-        int value = (str_len * 10) + sum % 10;
+        int value = len * 10 + sum % 10;
 
         // 如果轉換後的數字比目前的最大值還要大
         if (value > max_value) {
