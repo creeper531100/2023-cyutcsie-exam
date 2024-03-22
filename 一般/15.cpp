@@ -1,8 +1,6 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+#include <fstream>
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 using namespace std;
 
@@ -16,23 +14,24 @@ using namespace std;
  * 如果數字總和等於目標值，就把計數器加 1。
  * 最後輸出計數器的值，即為結果。
  */
- 
+
 int main() {
     int range; // 上限數字
     int target; // 目標數字和
     int count = 0; // 符合條件的數字個數
 
-    FILE* file = fopen("123.txt", "r"); // 開啟檔案
-    fscanf(file, "%d %d", &range, &target); // 從檔案讀入上限數字與目標數字和
+    ifstream ifs("123.txt");
+    ifs >> range >> target;
+
     printf("%d %d\n", range, target);
 
     // 搜尋範圍內的每個數字
     for (int i = 0; i <= range; i++) {
-         // 目前數字的數字和
+        // 目前數字的數字和
         int digit_sum = 0;
         int tmp = i;
 
-        while(tmp != 0) {
+        while (tmp != 0) {
             // 首先計算tmp除以10的餘數，即tmp % 10，這是為了得到i的最低位數
             digit_sum += tmp % 10;
             // tmp 除以10，即將其向右移動一位，以處理i的下一位數。
