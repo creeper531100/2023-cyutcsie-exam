@@ -1,5 +1,3 @@
-﻿#define _CRT_SECURE_NO_WARNINGS // 忽略警告
-
 #include <fstream> // 輸入輸出檔案用
 #include <iostream> // 輸出結果用
 #include <math.h>  
