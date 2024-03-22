@@ -1,7 +1,6 @@
-﻿#include <iostream>
+#include <iostream>
+#include <algorithm>
 #include <fstream>
-#include <sstream>
-#include <algorithm> // std::sort
 
 /*
  * 需要注意的是，程式碼中的 std::sort 函式需要使用 algorithm 標頭檔案。
@@ -10,53 +9,31 @@
 
 using namespace std;
 int main() {
-    ifstream input_file("123.txt"); // 讀取輸入檔案
-
     int data[99] = { 0 }; // 儲存輸入的正整數序列
     int len = 0; // 正整數序列的長度
 
-    string res;
-
-    //讀取第一行
-    getline(input_file, res);
-    stringstream ss(res);
+    ifstream ifs("123.txt"); // 讀取輸入檔案
 
     // 讀入正整數序列
-    while (ss >> data[len]) {
+    while (ifs >> data[len]) {
         printf("%d ", data[len]); // 輸出每個輸入的數字
         len++; // 更新正整數序列的長度
     }
 
-    //讀取第二行長度
-    getline(input_file, res);
-    int K = atoi(res.c_str()); // 視窗大小
-
+    // 從序列中取得K值
+    int K = data[len - 1];
     printf("\n%d\nAns=", K);
 
-    for (int i = 0; i < len; i++) {
-        int window[10] = { 0 }; // 儲存目前的視窗
+    for (int i = 0; i <= len - K - 1; i++) {
+        int window[10] = { 0 };
 
-        // 超出正整數序列的範圍，不處理
-        if (i + K > len) {
-            /*
-             * 這邊用來檢查有沒有超出範圍，超出就直接跳出迴圈。
-             * i 是目前位置，K 是視窗大小，變數 len 則是儲存正整數序列的長度。
-             * 如果 i + K 超過 len，表示已經處理完了正整數序列的所有元素。
-             * 因為當超出範圍時視窗不足以容納 K 個元素，所以也就無法做中值濾波的動作，因此可以直接跳出迴圈，不再繼續處理。
-             * ex 1 2 3 4
-             * 第一次 1 2 3, (0 + 3) < 4
-             * 第二次 2 3 4, (1 + 3) < 4
-             * 第三次 3 4 (無法構成一個完整的窗口) (2 + 3) > 4
-             */
-            break;
-        }
+        // 從data陣列中 從i複製長度K至window
+        memcpy(window, data + i, K * sizeof(int));
 
-        for (int j = 0; j < K; j++) {
-            window[j] = data[i + j]; // 把正整數序列中的數字加入視窗
-        }
+        //排序
+        sort(window, window + K);
 
-        sort(window, window + K); // 對視窗內的數字進行排序
-        printf("%d ", window[K / 2]); // 輸出排序後中間位置的數字
+        cout << window[K / 2] << " ";
     }
 }
 
