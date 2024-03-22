@@ -32,13 +32,11 @@ int main() {
         count++;
     }
 
-    // 使用STL中的sort函數對數字進行排序
-    sort(num, num + count, asc); // 預設升序排序
+    // 函數指標，0會調用升續，反之
+    bool (*pfn[2])(int, int) = { asc, desc };
 
-    // 如果選擇為降序，則使用desc函數進行降序排序
-    if (sel == 1) {
-        sort(num, num + count, desc);
-    }
+    // 使用STL中的sort函數對數字進行排序
+    sort(num, num + count, pfn[sel]);
 
     // 輸出排序後的結果
     printf("\nAns=");

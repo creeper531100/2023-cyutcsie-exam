@@ -49,13 +49,6 @@ int main() {
         }
     }
 
-    /* TODO: 使用快速解法求解rem[i]的值（可替換上面的代碼塊）
-     * for (int i = 0; i < len; i++) {
-     *   prime[i] = prime_mul / a1[i];
-     *   rem[i] = prime[i] % a1[i];
-     * }
-     */
-
     int ans = 0;
     for (int i = 0; i < len; i++) {
         ans += prime[i] * rem[i] * a2[i];
