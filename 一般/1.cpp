@@ -1,6 +1,5 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
+#define _CRT_SECURE_NO_WARNINGS
+#include <fstream>
 #include <iostream>
 
 using namespace std;
@@ -18,11 +17,11 @@ using namespace std;
 
 int main() {
     int res = 0;
-    FILE* file = fopen("a.txt", "r+");
-    fscanf(file, "%d", &res);
-    printf("%d\n", res);
-
     int mp[65535] = { 0 };
+
+    ifstream ifs("a.txt");
+    ifs >> res;
+    cout << res << endl;
 
     // 從2開始到res，進行以下的迴圈
     // 質因數從2開始，結果不大於輸入數字
