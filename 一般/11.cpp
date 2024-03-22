@@ -1,13 +1,9 @@
-﻿#include <fstream>
+#include <fstream>
 #include <iostream>
-#include <sstream>
 using namespace std;
 
 int main() {
     ifstream ss("123.txt");
-
-    int tmp1;
-    int tmp2;
 
     // 陣列長度
     int len = 0;
@@ -28,13 +24,10 @@ int main() {
     //     ^   ^   ^
     //  105/3  餘數 下一個數字
 
-    // 逐個讀入質數(tmp1)和餘數(tmp2)，並計算質數的乘積
-    while (ss >> tmp1 >> tmp2) {
-        a1[len] = tmp1;
-        a2[len] = tmp2;
-        printf("%d %d ", tmp1, tmp2);
-
-        prime_mul *= tmp1;
+    // 逐個讀入質數a1[len]和餘數a2[len]，並計算質數的乘積
+    while (ss >> a1[len] >> a2[len]) {
+        printf("%d %d ", a1[len], a2[len]);
+        prime_mul *= a1[len];
         len++;
     }
 
