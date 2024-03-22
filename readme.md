@@ -41,7 +41,7 @@
 https://csie.cyut.edu.tw/p/412-1044-811.php?Lang=zh-tw  
 你也可以使用程式自學平臺來驗證題目  
 選擇老師專區 -> 台中市 -> 朝陽 -> 廖珗洲老師  
-https://e-tutor.itsa.org.tw/)](https://e-tutor.itsa.org.tw/
+https://e-tutor.itsa.org.tw/
 
 # 過檢測版本要讀嗎?  
 
