@@ -1,16 +1,15 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
+#include <fstream>
+
 using namespace std;
 
 int main() {
-    FILE* file = fopen("123.txt", "r+");
+    ifstream ifs("123.txt");
 
     int month;
     int day;
 
-    fscanf(file, "%d %d", &month, &day);
+    ifs >> month >> day;
     printf("%d %d\n", month, day);
 
     /*
