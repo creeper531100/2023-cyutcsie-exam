@@ -1,44 +1,36 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
 #include <fstream>
 #include <iostream>
-#include <string.h>
 
 using namespace std;
-
-// 輸出指定數量的星號字符
-void print_star(int num) {
-    for (int i = 0; i < num; i++) {
-        printf("*");
-    }
-    printf("\n");
-}
 
 int main() {
     ifstream file("123.txt");
 
     // 格式化單字陣列
-    char words[99][99] = { {'\0'} };
+    string words[99];
 
-    // 單字數量
-    int words_len = 0;
-    // 最長單字的長度
-    int max_word_len = 0;
+    int idx = 0; // 單字數量
+    int max = 0; // 最長單字的長度
 
     // 讀取每個單字
-    while (file >> words[words_len]) {
+    while (file >> words[idx]) {
         // 更新最長單字的長度
-        if (max_word_len <= strlen(words[words_len])) {
-            max_word_len = strlen(words[words_len]);
+        if (max <= words[idx].length()) {
+            max = words[idx].length();
         }
-        cout << words[words_len] << " ";
-        words_len++;
+
+        cout << words[idx] << " ";
+        idx++;
     }
 
     printf("\n");
 
     // 輸出星號邊框 (左右邊星號也需要印出，所以+2)
-    print_star(max_word_len + 2);
-    for (int i = 0; i < words_len; i++) {
+    // 生成一個max + 2 的字串並且填充他
+    string padding(max + 2, '*');
+    cout << padding << endl;
+
+    for (int i = 0; i < idx; i++) {
         /*
          * *%-*s*\n 是一個格式化字串，用於輸出一個字符串並進行對齊操作。
          * *：表示字段寬度的值通過參數傳遞，而不是直接在格式字符串中指定。
@@ -46,10 +38,10 @@ int main() {
          * %s：表示輸出字符串。
          * \n：表示換行。
          */
-        printf("*%-*s*\n", max_word_len, words[i]);
+        printf("*%-*s*\n", max, words[i].c_str());
     }
 
-    print_star(max_word_len + 2);
+    cout << padding << endl;
 }
 
 /*
