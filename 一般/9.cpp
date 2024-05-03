@@ -23,7 +23,7 @@ int main() {
 
     // 逐個字符檢查，如果是大炸彈，則將其爆炸範圍內的 0 替換為 '-'
     // 如果是小炸彈，也做同樣的替換
-    for (int i = 0; i < res.length(); ++i) {
+    for (int i = 0; i < res.length(); i++) {
         if (res[i] == 'X') {
             ans[i - 2] = '-';
             ans[i + 2] = '-';
